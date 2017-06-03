@@ -37,3 +37,23 @@ ongr_elasticsearch:
                     number_of_shards: 5
             mappings:
                 - TestBundle
+        advanced_hosts:
+            index:
+                hosts:
+                    - 127.0.0.1:9200
+                    - https://test1.testdomain.local
+                    - https://testuser@test2.testdomain.local
+                    - https://testuser:@test3.testdomain.local
+                    - https://testuser:testpass@test4.testdomain.local/
+                    -
+                        host: 127.0.0.2
+                        port: 9200
+                    -
+                        host: test5.testdomain.local
+                        port: 9200
+                        scheme: https
+                        user: testuser
+                        pass: testpass
+                index_name: ongr-advanced-hosts-test
+            mappings:
+                - TestBundle
